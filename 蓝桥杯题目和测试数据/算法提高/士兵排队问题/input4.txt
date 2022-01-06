@@ -1,0 +1,10 @@
+H>Y
+R>F
+S>G
+T>R
+H>T
+J>T
+Z>T
+J>E
+Z>G
+E>S

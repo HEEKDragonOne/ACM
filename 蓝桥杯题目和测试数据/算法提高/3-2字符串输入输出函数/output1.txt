@@ -1,0 +1,4 @@
+please input a number:
+please input a string:
+9.56
+hello

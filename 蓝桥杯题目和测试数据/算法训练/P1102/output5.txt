@@ -1,0 +1,33 @@
+student19 male 17 75
+student20 male 17 75
+student18 male 17 76
+student17 male 17 77
+student16 male 17 78
+student15 male 17 79
+student14 male 17 81
+student13 male 17 82
+student10 male 17 83
+student11 male 17 83
+student12 male 17 83
+student9 male 17 84
+student8 male 17 85
+student7 male 17 86
+student6 male 17 87
+student4 male 17 88
+student5 male 17 88
+student2 male 17 89
+student3 male 17 89
+student1 male 17 90
+
+
+
+
+
+
+
+
+
+
+
+
+

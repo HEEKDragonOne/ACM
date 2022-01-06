@@ -1,0 +1,15 @@
+student8 male 18 64
+student2 female 17 78
+student5 female 19 78
+student6 female 18 82
+student4 male 17 84
+student10 female 18 84
+student3 female 18 88
+student7 male 16 91
+student9 male 20 91
+student1 female 18 98
+
+
+
+
+

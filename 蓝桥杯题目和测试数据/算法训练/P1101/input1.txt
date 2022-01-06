@@ -1,0 +1,5 @@
+4
+book 12.5 3
+pen 2.5 10
+computer 3200 1
+flower 47 5

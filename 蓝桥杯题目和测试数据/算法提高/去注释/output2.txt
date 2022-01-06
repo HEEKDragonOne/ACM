@@ -1,0 +1,213 @@
+
+
+#include	"CComBuf.h"
+
+
+
+
+
+CCommonBuffer::CCommonBuffer( int nCellSize )
+{
+	nMaxLen = nDataLen = 0;
+	nMaxLenByByte = 0;
+	nUpperLimit = 0;
+	pBuffer = NULL;
+	if( nCellSize <= 0 ) this->nCellSize = 1;
+	else this->nCellSize = nCellSize;
+}
+
+CCommonBuffer::~CCommonBuffer()
+{
+	if( pBuffer != NULL ) {
+		free( pBuffer );
+	}
+}
+
+
+bool CCommonBuffer::GetValue( int nOffset, void *nValue, int nNumOfCells )
+{
+	if( nUpperLimit!=0 && nOffset>=nUpperLimit ) return false;
+	if( nNumOfCells <= 0 ) return false;
+	if( (nOffset+nNumOfCells) > nDataLen ) return false;
+	memmove( nValue, &pBuffer[nOffset*nCellSize], nCellSize*nNumOfCells );
+	return true;
+}
+
+bool CCommonBuffer::SetValue( void *nValue, int nOffset, int nNumOfCells )
+{
+	if( nUpperLimit!=0 && nOffset+nNumOfCells>nUpperLimit ) return false;
+	if( nNumOfCells <= 0 ) return false;
+	if( nOffset+nNumOfCells > nMaxLen ) {
+		if( ResizeBuffer(nOffset+nNumOfCells) != true ) return false;
+	}
+	if( nOffset+nNumOfCells > nDataLen ) nDataLen = nOffset+nNumOfCells;
+	memmove( &pBuffer[nOffset*nCellSize], nValue, nCellSize*nNumOfCells );
+	return true;
+}
+
+bool CCommonBuffer::InsertValue( int nOffset, void *nValue, int nNumOfCells )
+{
+	if( nUpperLimit!=0 && nDataLen+nNumOfCells>nUpperLimit ) return false;
+	if( nNumOfCells <= 0 ) return false;
+	if( nDataLen+nNumOfCells > nMaxLen ) {
+		if( ResizeBuffer(nDataLen+nNumOfCells) != true ) return false;
+	}
+	void *src = &pBuffer[nOffset*nCellSize];
+	void *dest = &pBuffer[(nOffset+nNumOfCells)*nCellSize];
+	memmove( dest, src, nCellSize*(nDataLen-nOffset) );
+	memmove( src, nValue, nCellSize*nNumOfCells );
+	nDataLen += nNumOfCells;
+	return true;
+}
+
+void CCommonBuffer::ResetBuffer( int nCellSize )
+{
+	if( nCellSize > 0 ) this->nCellSize = nCellSize;
+	nDataLen = 0;
+	nMaxLen = nMaxLenByByte / this->nCellSize;
+	if( pBuffer != NULL ) {
+		memset( pBuffer, 0, nMaxLenByByte );
+	}
+}
+
+void CCommonBuffer::ClearBuffer( BYTE nFillByte )
+{
+	if( pBuffer != NULL ) {
+		memset( pBuffer, nFillByte, nMaxLenByByte );
+	}
+}
+
+bool CCommonBuffer::SetDataLen( int nLen )
+{
+	if( nLen < 0 ) return false;
+	if( nLen != 0 && ResizeBuffer(nLen) != true ) return false;
+	nDataLen = nLen;
+	return true;
+}
+
+bool CCommonBuffer::TruncateDataHead( int nLen )
+{
+    if( nLen<0 || nLen>nDataLen ) return false;
+	nDataLen -= nLen;
+	memmove( pBuffer, pBuffer+nLen*nCellSize, nDataLen*nCellSize );
+	return true;
+}
+
+bool CCommonBuffer::DiscardSection( int nOffset, int nLen )
+{
+	if( nUpperLimit!=0 && nOffset+nLen>nUpperLimit ) return false;
+	if( nLen <= 0 ) return false;
+	if( nOffset >= nDataLen ) return false;
+	if( nOffset+nLen > nDataLen ) {
+		nDataLen = nOffset;
+		return true;
+	}
+	void *src = &pBuffer[(nOffset+nLen)*nCellSize];
+	void *dest = &pBuffer[nOffset*nCellSize];
+	memmove( dest, src, nCellSize*(nDataLen-(nOffset+nLen)) );
+	nDataLen -= nLen;
+	return true;
+}
+
+bool CCommonBuffer::ResizeBuffer( int nDesiredLen )
+{
+	if( nDesiredLen < 0 ) return false;
+	if( nDesiredLen == 0 ) {
+		if( pBuffer != NULL ) {
+			free( pBuffer );
+			pBuffer = NULL;
+		}
+		nDataLen = 0;
+		nMaxLen = 0;
+		nMaxLenByByte = 0;
+		return true;
+	}
+
+	if( nUpperLimit!=0 && nDesiredLen>=nUpperLimit ) {
+		nDesiredLen = nUpperLimit;
+		if( nMaxLen == nUpperLimit ) return true;
+	}
+
+	int delta = nDesiredLen - nMaxLen;
+	if( delta <= 0 ) return true;
+	if( (delta*nCellSize)%1024 != 0 ) {
+		delta = (int)( ceil( (delta*nCellSize/1024+1)*1024 / (double)nCellSize ) );
+	}
+
+	BYTE *p = (BYTE *)realloc( pBuffer, (delta+nMaxLen)*nCellSize );
+	if( p == NULL ) {
+
+		return false;
+	} else {
+		pBuffer = p;
+		nMaxLen += delta;
+		nMaxLenByByte = nMaxLen * nCellSize;
+		return true;
+	}
+}
+
+bool CCommonBuffer::SetBuffer( void *pDataPtr, int nLen )
+{
+	if( nUpperLimit!=0 && nLen>nUpperLimit ) {
+		int nDelta = nLen - nUpperLimit;
+		nLen = nUpperLimit;
+		pDataPtr = (BYTE *)pDataPtr + (nDelta*nCellSize);
+	}
+
+	if( ! ResizeBuffer(nLen) ) return false;
+	memmove( pBuffer, pDataPtr, nLen*nCellSize );
+	nDataLen = nLen;
+	return true;
+}
+
+bool CCommonBuffer::DupBuffer( CCommonBuffer *pSrcBuffer )
+{
+	int nLen = pSrcBuffer->GetDataLen();
+	BYTE *pDataPtr = (BYTE *)pSrcBuffer->GetBuffer(0);
+	return SetBuffer( pDataPtr, nLen );
+}
+
+bool CCommonBuffer::AppendBuffer( void *pDataPtr, int nLen )
+{
+	if( ! ResizeBuffer(nDataLen+nLen) ) return false;
+	int nSpace = nMaxLen - nDataLen;
+	if( nSpace >= nLen ) {
+		memmove( &pBuffer[nDataLen*nCellSize], pDataPtr, nLen*nCellSize );
+		nDataLen += nLen;
+	} else {
+		int nDelta = nLen - nSpace;
+		if( nDelta <= nDataLen ) {
+			memmove( &pBuffer[0], &pBuffer[nDelta*nCellSize], (nDataLen-nDelta)*nCellSize );
+			nDataLen -= nDelta;
+			memmove( &pBuffer[nDataLen*nCellSize], pDataPtr, nLen*nCellSize );
+			nDataLen += nLen;
+		} else {
+			SetBuffer( pDataPtr, nLen );
+		}
+	}
+	return true;
+}
+
+bool CCommonBuffer::SetUpperLimit( int nULimit )
+{
+	if( nULimit<0 ) return false;
+	if( nULimit==0 ) {
+		nUpperLimit = 0;
+		return true;
+	}
+	if( (nULimit*nCellSize)%1024 != 0 ) {
+		nULimit = (int)( ceil( (nULimit*nCellSize/1024+1)*1024 / (double)nCellSize ) );
+	}
+
+	nUpperLimit = nULimit;
+	if( nULimit < nMaxLen ) {
+		pBuffer = (BYTE *)realloc( pBuffer, nULimit*nCellSize );
+		if( pBuffer == NULL ) {
+
+		}
+		nMaxLen = nULimit;
+		nMaxLenByByte = nMaxLen*nCellSize;
+		if( nDataLen > nULimit ) nDataLen = nULimit;
+	}
+	return true;
+}

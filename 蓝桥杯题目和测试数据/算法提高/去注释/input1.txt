@@ -1,0 +1,66 @@
+/*************
+ * @brief 去掉一个程序的注释
+ * @author liuyuchen
+ * @date 2011//10//26
+ */ 
+
+#include <stdio.h>
+
+int main() {
+    freopen("2.in", "r", stdin);
+    freopen("2.out", "w", stdout);
+    
+    char c;
+    int comment = 0; //0不在注释内,1在行注释内,2在block注释内 
+    
+    while ((scanf("%c", &c)) != EOF) {
+          if (comment == 0) {//注释外情况 
+             if (c == '/') {
+                char lc = c;//保存上一个字符
+                            
+                if ((scanf("%c", &c)) == EOF) {
+                   printf("%c", lc);
+                   break;
+                }
+                /*
+                以下是
+                 三种情况
+                */ 
+                if (c == '/') comment = 1;
+                else if (c == '*') comment = 2;
+                else printf("%c%c", lc, c);
+             }
+             else printf("%c", c);
+             continue;
+          }
+          if (comment == 1) {//目前处于行注释内 
+             if (c == '\n') {
+                   printf("\n");
+                   comment = 0;
+             }
+             continue;
+          }
+          if (comment == 2) {//目前在block注释内 
+             if (c == '*') {
+                char lc = c;
+                if ((scanf("%c", &c)) == EOF) {
+                   break;
+                }
+                if (c == '/') comment = 0;
+             }
+             continue;
+          } 
+    }    
+    /*
+    尾巴 
+    */
+    return 0;
+}
+
+/*
+	注意：中间有一空行是因为注释段前后各有一个换行符，都得保留，换言之，除注释部分以外的字符都要保留输出。输入的程序保证合法。
+
+输入
+	一段程序，可以看作若干个字符
+
+*/

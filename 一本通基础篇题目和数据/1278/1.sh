@@ -1,0 +1,10 @@
+./std < data/books0.in > data/books0.out
+./std < data/books1.in > data/books1.out
+./std < data/books2.in > data/books2.out
+./std < data/books3.in > data/books3.out
+./std < data/books4.in > data/books4.out
+./std < data/books5.in > data/books5.out
+./std < data/books6.in > data/books6.out
+./std < data/books7.in > data/books7.out
+./std < data/books8.in > data/books8.out
+./std < data/books9.in > data/books9.out

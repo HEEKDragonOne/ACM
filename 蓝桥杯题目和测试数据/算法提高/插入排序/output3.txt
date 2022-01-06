@@ -1,0 +1,142 @@
+Insert element[1]:
+  Init:4
+  Final:4
+Insert element[2]:
+  Init:4 12
+  Final:4 12
+Insert element[3]:
+  Init:4 12 5
+  Move back:4 12 12
+  Final:4 5 12
+Insert element[4]:
+  Init:4 5 12 9
+  Move back:4 5 12 12
+  Final:4 5 9 12
+Insert element[5]:
+  Init:4 5 9 12 3
+  Move back:4 5 9 12 12
+  Move back:4 5 9 9 12
+  Move back:4 5 5 9 12
+  Move back:4 4 5 9 12
+  Final:3 4 5 9 12
+Insert element[6]:
+  Init:3 4 5 9 12 4
+  Move back:3 4 5 9 12 12
+  Move back:3 4 5 9 9 12
+  Move back:3 4 5 5 9 12
+  Final:3 4 4 5 9 12
+Insert element[7]:
+  Init:3 4 4 5 9 12 15
+  Final:3 4 4 5 9 12 15
+Insert element[8]:
+  Init:3 4 4 5 9 12 15 12
+  Move back:3 4 4 5 9 12 15 15
+  Final:3 4 4 5 9 12 12 15
+Insert element[9]:
+  Init:3 4 4 5 9 12 12 15 6
+  Move back:3 4 4 5 9 12 12 15 15
+  Move back:3 4 4 5 9 12 12 12 15
+  Move back:3 4 4 5 9 12 12 12 15
+  Move back:3 4 4 5 9 9 12 12 15
+  Final:3 4 4 5 6 9 12 12 15
+Insert element[10]:
+  Init:3 4 4 5 6 9 12 12 15 7
+  Move back:3 4 4 5 6 9 12 12 15 15
+  Move back:3 4 4 5 6 9 12 12 12 15
+  Move back:3 4 4 5 6 9 12 12 12 15
+  Move back:3 4 4 5 6 9 9 12 12 15
+  Final:3 4 4 5 6 7 9 12 12 15
+Insert element[11]:
+  Init:3 4 4 5 6 7 9 12 12 15 5
+  Move back:3 4 4 5 6 7 9 12 12 15 15
+  Move back:3 4 4 5 6 7 9 12 12 12 15
+  Move back:3 4 4 5 6 7 9 12 12 12 15
+  Move back:3 4 4 5 6 7 9 9 12 12 15
+  Move back:3 4 4 5 6 7 7 9 12 12 15
+  Move back:3 4 4 5 6 6 7 9 12 12 15
+  Final:3 4 4 5 5 6 7 9 12 12 15
+Insert element[12]:
+  Init:3 4 4 5 5 6 7 9 12 12 15 10
+  Move back:3 4 4 5 5 6 7 9 12 12 15 15
+  Move back:3 4 4 5 5 6 7 9 12 12 12 15
+  Move back:3 4 4 5 5 6 7 9 12 12 12 15
+  Final:3 4 4 5 5 6 7 9 10 12 12 15
+Insert element[13]:
+  Init:3 4 4 5 5 6 7 9 10 12 12 15 10
+  Move back:3 4 4 5 5 6 7 9 10 12 12 15 15
+  Move back:3 4 4 5 5 6 7 9 10 12 12 12 15
+  Move back:3 4 4 5 5 6 7 9 10 12 12 12 15
+  Final:3 4 4 5 5 6 7 9 10 10 12 12 15
+Insert element[14]:
+  Init:3 4 4 5 5 6 7 9 10 10 12 12 15 8
+  Move back:3 4 4 5 5 6 7 9 10 10 12 12 15 15
+  Move back:3 4 4 5 5 6 7 9 10 10 12 12 12 15
+  Move back:3 4 4 5 5 6 7 9 10 10 12 12 12 15
+  Move back:3 4 4 5 5 6 7 9 10 10 10 12 12 15
+  Move back:3 4 4 5 5 6 7 9 10 10 10 12 12 15
+  Move back:3 4 4 5 5 6 7 9 9 10 10 12 12 15
+  Final:3 4 4 5 5 6 7 8 9 10 10 12 12 15
+Insert element[15]:
+  Init:3 4 4 5 5 6 7 8 9 10 10 12 12 15 9
+  Move back:3 4 4 5 5 6 7 8 9 10 10 12 12 15 15
+  Move back:3 4 4 5 5 6 7 8 9 10 10 12 12 12 15
+  Move back:3 4 4 5 5 6 7 8 9 10 10 12 12 12 15
+  Move back:3 4 4 5 5 6 7 8 9 10 10 10 12 12 15
+  Move back:3 4 4 5 5 6 7 8 9 10 10 10 12 12 15
+  Final:3 4 4 5 5 6 7 8 9 9 10 10 12 12 15
+Insert element[16]:
+  Init:3 4 4 5 5 6 7 8 9 9 10 10 12 12 15 5
+  Move back:3 4 4 5 5 6 7 8 9 9 10 10 12 12 15 15
+  Move back:3 4 4 5 5 6 7 8 9 9 10 10 12 12 12 15
+  Move back:3 4 4 5 5 6 7 8 9 9 10 10 12 12 12 15
+  Move back:3 4 4 5 5 6 7 8 9 9 10 10 10 12 12 15
+  Move back:3 4 4 5 5 6 7 8 9 9 10 10 10 12 12 15
+  Move back:3 4 4 5 5 6 7 8 9 9 9 10 10 12 12 15
+  Move back:3 4 4 5 5 6 7 8 9 9 9 10 10 12 12 15
+  Move back:3 4 4 5 5 6 7 8 8 9 9 10 10 12 12 15
+  Move back:3 4 4 5 5 6 7 7 8 9 9 10 10 12 12 15
+  Move back:3 4 4 5 5 6 6 7 8 9 9 10 10 12 12 15
+  Final:3 4 4 5 5 5 6 7 8 9 9 10 10 12 12 15
+Insert element[17]:
+  Init:3 4 4 5 5 5 6 7 8 9 9 10 10 12 12 15 4
+  Move back:3 4 4 5 5 5 6 7 8 9 9 10 10 12 12 15 15
+  Move back:3 4 4 5 5 5 6 7 8 9 9 10 10 12 12 12 15
+  Move back:3 4 4 5 5 5 6 7 8 9 9 10 10 12 12 12 15
+  Move back:3 4 4 5 5 5 6 7 8 9 9 10 10 10 12 12 15
+  Move back:3 4 4 5 5 5 6 7 8 9 9 10 10 10 12 12 15
+  Move back:3 4 4 5 5 5 6 7 8 9 9 9 10 10 12 12 15
+  Move back:3 4 4 5 5 5 6 7 8 9 9 9 10 10 12 12 15
+  Move back:3 4 4 5 5 5 6 7 8 8 9 9 10 10 12 12 15
+  Move back:3 4 4 5 5 5 6 7 7 8 9 9 10 10 12 12 15
+  Move back:3 4 4 5 5 5 6 6 7 8 9 9 10 10 12 12 15
+  Move back:3 4 4 5 5 5 5 6 7 8 9 9 10 10 12 12 15
+  Move back:3 4 4 5 5 5 5 6 7 8 9 9 10 10 12 12 15
+  Move back:3 4 4 5 5 5 5 6 7 8 9 9 10 10 12 12 15
+  Final:3 4 4 4 5 5 5 6 7 8 9 9 10 10 12 12 15
+Insert element[18]:
+  Init:3 4 4 4 5 5 5 6 7 8 9 9 10 10 12 12 15 5
+  Move back:3 4 4 4 5 5 5 6 7 8 9 9 10 10 12 12 15 15
+  Move back:3 4 4 4 5 5 5 6 7 8 9 9 10 10 12 12 12 15
+  Move back:3 4 4 4 5 5 5 6 7 8 9 9 10 10 12 12 12 15
+  Move back:3 4 4 4 5 5 5 6 7 8 9 9 10 10 10 12 12 15
+  Move back:3 4 4 4 5 5 5 6 7 8 9 9 10 10 10 12 12 15
+  Move back:3 4 4 4 5 5 5 6 7 8 9 9 9 10 10 12 12 15
+  Move back:3 4 4 4 5 5 5 6 7 8 9 9 9 10 10 12 12 15
+  Move back:3 4 4 4 5 5 5 6 7 8 8 9 9 10 10 12 12 15
+  Move back:3 4 4 4 5 5 5 6 7 7 8 9 9 10 10 12 12 15
+  Move back:3 4 4 4 5 5 5 6 6 7 8 9 9 10 10 12 12 15
+  Final:3 4 4 4 5 5 5 5 6 7 8 9 9 10 10 12 12 15
+Insert element[19]:
+  Init:3 4 4 4 5 5 5 5 6 7 8 9 9 10 10 12 12 15 7
+  Move back:3 4 4 4 5 5 5 5 6 7 8 9 9 10 10 12 12 15 15
+  Move back:3 4 4 4 5 5 5 5 6 7 8 9 9 10 10 12 12 12 15
+  Move back:3 4 4 4 5 5 5 5 6 7 8 9 9 10 10 12 12 12 15
+  Move back:3 4 4 4 5 5 5 5 6 7 8 9 9 10 10 10 12 12 15
+  Move back:3 4 4 4 5 5 5 5 6 7 8 9 9 10 10 10 12 12 15
+  Move back:3 4 4 4 5 5 5 5 6 7 8 9 9 9 10 10 12 12 15
+  Move back:3 4 4 4 5 5 5 5 6 7 8 9 9 9 10 10 12 12 15
+  Move back:3 4 4 4 5 5 5 5 6 7 8 8 9 9 10 10 12 12 15
+  Final:3 4 4 4 5 5 5 5 6 7 7 8 9 9 10 10 12 12 15
+Insert element[20]:
+  Init:3 4 4 4 5 5 5 5 6 7 7 8 9 9 10 10 12 12 15 16
+  Final:3 4 4 4 5 5 5 5 6 7 7 8 9 9 10 10 12 12 15 16

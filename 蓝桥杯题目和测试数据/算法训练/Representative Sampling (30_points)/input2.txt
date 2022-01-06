@@ -1,0 +1,11 @@
+10 5
+a
+handful
+of
+strings
+my
+hands
+are
+full
+of
+strings

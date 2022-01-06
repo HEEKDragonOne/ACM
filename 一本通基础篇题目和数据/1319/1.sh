@@ -1,0 +1,10 @@
+./std < ./data/water0.in > ./data/water0.out
+./std < ./data/water1.in > ./data/water1.out
+./std < ./data/water2.in > ./data/water2.out
+./std < ./data/water3.in > ./data/water3.out
+./std < ./data/water4.in > ./data/water4.out
+./std < ./data/water5.in > ./data/water5.out
+./std < ./data/water6.in > ./data/water6.out
+./std < ./data/water7.in > ./data/water7.out
+./std < ./data/water8.in > ./data/water8.out
+./std < ./data/water9.in > ./data/water9.out

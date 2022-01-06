@@ -1,0 +1,54 @@
+Insert element[1]:
+  Init:9
+  Final:9
+Insert element[2]:
+  Init:9 3
+  Move back:9 9
+  Final:3 9
+Insert element[3]:
+  Init:3 9 3
+  Move back:3 9 9
+  Final:3 3 9
+Insert element[4]:
+  Init:3 3 9 9
+  Final:3 3 9 9
+Insert element[5]:
+  Init:3 3 9 9 4
+  Move back:3 3 9 9 9
+  Move back:3 3 9 9 9
+  Final:3 3 4 9 9
+Insert element[6]:
+  Init:3 3 4 9 9 3
+  Move back:3 3 4 9 9 9
+  Move back:3 3 4 9 9 9
+  Move back:3 3 4 4 9 9
+  Final:3 3 3 4 9 9
+Insert element[7]:
+  Init:3 3 3 4 9 9 5
+  Move back:3 3 3 4 9 9 9
+  Move back:3 3 3 4 9 9 9
+  Final:3 3 3 4 5 9 9
+Insert element[8]:
+  Init:3 3 3 4 5 9 9 3
+  Move back:3 3 3 4 5 9 9 9
+  Move back:3 3 3 4 5 9 9 9
+  Move back:3 3 3 4 5 5 9 9
+  Move back:3 3 3 4 4 5 9 9
+  Final:3 3 3 3 4 5 9 9
+Insert element[9]:
+  Init:3 3 3 3 4 5 9 9 5
+  Move back:3 3 3 3 4 5 9 9 9
+  Move back:3 3 3 3 4 5 9 9 9
+  Final:3 3 3 3 4 5 5 9 9
+Insert element[10]:
+  Init:3 3 3 3 4 5 5 9 9 1
+  Move back:3 3 3 3 4 5 5 9 9 9
+  Move back:3 3 3 3 4 5 5 9 9 9
+  Move back:3 3 3 3 4 5 5 5 9 9
+  Move back:3 3 3 3 4 5 5 5 9 9
+  Move back:3 3 3 3 4 4 5 5 9 9
+  Move back:3 3 3 3 3 4 5 5 9 9
+  Move back:3 3 3 3 3 4 5 5 9 9
+  Move back:3 3 3 3 3 4 5 5 9 9
+  Move back:3 3 3 3 3 4 5 5 9 9
+  Final:1 3 3 3 3 4 5 5 9 9

@@ -1,0 +1,256 @@
+
+#include	"GraphManage.h"
+
+const char	NODELABEL	= 'N';
+const char	ARCLABEL	= 'A';
+const char	COMMENTLABEL	= '#';
+
+const char	NODENUM[]	= "NODE";
+const char	ARCNUM[]	= "ARC";
+
+const char	MIDLABEL[]	= "MID";
+const char	BEGINLABEL[]	= "BEGIN";
+const char	ENDLABEL[]	= "END";
+const char	BEGINENDLABEL[]	= "BEGIN_END";
+
+const char	NULLARCLABEL[]	= "!NULL!";
+
+#define		MAXLINELENGTH	400
+
+GraphManage::GraphManage()
+{
+	m_bInited	= false;
+	m_pGraphNodeBuf	= NULL;
+	m_pGraphArcBuf	= NULL;
+	m_nGraphNodeNum	= m_nGraphArcNum = 0;
+}
+
+GraphManage::~GraphManage()
+{
+	if ( m_nGraphArcNum > 0 )
+	{
+		for ( int i=0; i<m_nGraphArcNum; i++ )
+			delete [] m_pGraphArcBuf[i].szWordName;
+	}
+ 	if ( m_pGraphNodeBuf ) delete [] m_pGraphNodeBuf;
+ 	if ( m_pGraphArcBuf ) delete [] m_pGraphArcBuf;
+}
+
+
+bool GraphManage::LoadGraphFile( char *szGraphFName )
+{
+	m_bInited = false;
+	if ( m_pGraphNodeBuf ) delete [] m_pGraphNodeBuf;
+	if ( m_pGraphArcBuf ) delete [] m_pGraphArcBuf;
+	m_pGraphNodeBuf = NULL;
+	m_pGraphArcBuf = NULL;
+	m_nGraphNodeNum = m_nGraphArcNum = 0;
+
+	if ( !szGraphFName || strlen(szGraphFName)==0 ) return false;
+	FILE *f = fopen(szGraphFName, "rt");
+	if ( !f ) return false;
+
+	char	string	[MAXLINELENGTH];
+	char	buf	[MAXLINELENGTH];	// same size as string	
+	int	i, num;
+	int	readstate = 0;
+
+	while ( fgets(string, sizeof(string)-1, f) != NULL )	
+	{
+		if ( string[strlen(string)-1] == '\n' )
+			string[strlen(string)-1] = '\0';
+
+		// continue if just a return
+		if ( strlen(string)==0 ) continue;
+
+		// continue if just blanks and tables
+		if ( sscanf( string, "%s", buf ) == EOF ) continue;
+
+		// continue if a comment line
+		if ( buf[0] == COMMENTLABEL ) continue;
+
+		switch ( readstate )
+		{
+		case 0: //???????NODE?????
+			if ( sscanf(string, "%s%d", buf, &num) !=2 ) { fclose(f); return false; }
+			_strupr(buf);
+			if ( strcmp(buf, NODENUM) != 0 ) { fclose(f); return false; }
+			if ( num <=0 ) { fclose(f); return false; }
+			m_pGraphNodeBuf = new GraphNode[num];
+			m_nGraphNodeNum = num;
+			memset(m_pGraphNodeBuf, 0, sizeof(GraphNode)*m_nGraphNodeNum);
+			for ( i=0; i<m_nGraphNodeNum; i++ )
+				m_pGraphNodeBuf[i].nNodeIdx = i;
+			readstate = 1;
+			break;
+		case 1://??¦Æ???ARC?????
+			if ( sscanf(string, "%s%d", buf, &num) !=2 ) { fclose(f); return false; }
+			_strupr(buf);
+			if ( strcmp(buf, ARCNUM) != 0 ) { fclose(f); return false; }
+			if ( num <=0 ) { fclose(f); return false; }
+			m_pGraphArcBuf = new GraphArc[num];
+			m_nGraphArcNum = num;
+			memset(m_pGraphArcBuf, 0, sizeof(GraphArc)*m_nGraphArcNum);
+			for ( i=0; i<m_nGraphArcNum; i++ )
+				m_pGraphArcBuf[i].nArcIdx = i;
+			readstate = 2;
+			break;
+		case 2: //?????????
+			_strupr(buf);
+			if ( buf[0] == NODELABEL )
+			{
+				if ( !ReadOneNode(string) )
+				{
+					printf("read node error: %s\n", string);
+					fclose(f);
+					return false;
+				}
+			}
+			else
+			{
+				if ( !ReadOneArc(string) )
+				{
+					printf("read arc error: %s\n", string);
+					fclose(f);
+					return false;
+				}
+				readstate = 3;
+			}
+			break;
+		case 3:
+			_strupr(buf);
+			if ( buf[0] != ARCLABEL ) { fclose(f); return false; }
+			if ( !ReadOneArc(string) )
+			{
+				printf("read arc error: %s\n", string);
+				fclose(f);
+				return false;
+			}
+			break;
+		}
+	}
+	fclose(f);
+	m_bInited = true;
+	return true;
+}
+
+bool GraphManage::ReadOneNode(char *str)
+{
+	char	buf1[MAXLINELENGTH], buf2[MAXLINELENGTH];	
+	int	idx;
+
+	if ( sscanf(str, "%s%d%s", buf1, &idx, buf2)!= 3 )
+		return false;
+	_strupr(buf1);
+	if ( buf1[0] != NODELABEL && buf1[1] != '\0' ) return false;
+	if ( idx >= m_nGraphNodeNum ) return false;
+
+	_strupr(buf2);
+	if ( strcmp(buf2, MIDLABEL) == 0 )
+		m_pGraphNodeBuf[idx].NodeType = FN_MID;
+	else if ( strcmp(buf2, BEGINLABEL) == 0 )
+		m_pGraphNodeBuf[idx].NodeType = FN_BEGIN;
+	else if ( strcmp(buf2, ENDLABEL) == 0 )
+		m_pGraphNodeBuf[idx].NodeType = FN_END;
+	else if ( strcmp(buf2, BEGINENDLABEL) == 0 )
+		m_pGraphNodeBuf[idx].NodeType = FN_BEGIN_END;
+	else
+		return false;
+	return true;
+}
+
+bool GraphManage::ReadOneArc(char *str)
+{
+	char	buf1[MAXLINELENGTH], buf2[MAXLINELENGTH+2];
+	int	idx, start, end;
+
+	if ( sscanf(str, "%s%d%d%d%s%f", buf1, &idx, &start, &end, buf2)!= 5 )
+		return false;
+	_strupr(buf1);
+	if ( buf1[0] != ARCLABEL && buf1[1] != '\0' ) return false;
+	if ( idx >= m_nGraphArcNum ) return false;
+	if ( start >= m_nGraphNodeNum || end >= m_nGraphNodeNum ) return false;
+
+	PGraphArc parc = m_pGraphArcBuf + idx;
+
+	parc->StartNode = m_pGraphNodeBuf + start;
+	parc->EndNode = m_pGraphNodeBuf + end;
+	parc->szWordName = new char [strlen(buf2)+1];
+	strcpy(parc->szWordName, buf2);
+
+	PGraphNode pnode = m_pGraphNodeBuf + start;
+	pnode->nChildArcNum ++;
+	parc->lpNextChild = pnode->lpChildArc;
+	pnode->lpChildArc = parc;
+//	parc->fltPenalty = -100;
+	return true;
+}
+
+bool GraphManage::GDecoderEFunc( EnquireInfoBuffer &EqInfoBuf, DWORD dwUserData )
+{
+	GraphManage *ptr = (GraphManage *)dwUserData;
+	return ptr->EnquireState(EqInfoBuf);
+}
+
+bool GraphManage::EnquireState( EnquireInfoBuffer &EqInfoBuf )
+{
+	EnquireInfo* info = EqInfoBuf.GetBuffer(0);
+	int laststate = info->dwGrammarState;
+	if ( laststate >= m_nGraphNodeNum || laststate<0 ) return false;
+	int allnum = 0;
+	//???????????§Ø????
+	allnum = GetChildNum( m_pGraphNodeBuf + laststate );
+	
+	EqInfoBuf.SetDataLen(allnum);
+	EnquireInfo* startpos = EqInfoBuf.GetBuffer();
+	EnquireInfo* endpos = startpos;
+
+	CreateEnquire( m_pGraphNodeBuf+laststate, endpos );
+
+	if ( endpos != startpos + allnum ) return false;
+	return true;
+}
+
+int	GraphManage::GetChildNum(PGraphNode node)
+{
+	int childnum = 0;
+	PGraphArc arc = node->lpChildArc;
+	while ( arc )
+	{
+		if ( strcmp(arc->szWordName, NULLARCLABEL)!=0 )
+			childnum ++;
+		else
+			childnum += GetChildNum(arc->EndNode);
+		arc = arc->lpNextChild;
+	}
+	return childnum;
+}
+
+bool GraphManage::CreateEnquire(PGraphNode node, EnquireInfo * &pInfo)
+{
+	PGraphArc arc = node->lpChildArc;
+	PGraphNode child;
+	while ( arc )
+	{
+		if ( strcmp(arc->szWordName, NULLARCLABEL)!=0 )
+		{
+			child = arc->EndNode;
+			pInfo->dwGrammarState = child->nNodeIdx;
+			pInfo->GrammarStateType = child->NodeType;
+			pInfo->szWordName = arc->szWordName;
+			pInfo->fltPenalty = arc->fltPenalty;
+			pInfo->bIsFillerFlag = false;
+			pInfo->bLMScoreUsedFlag = false;
+			pInfo->wWordIdx = 0;
+			pInfo->wWordClassIdx = 0;
+
+			pInfo ++;
+		}
+		else
+		{
+			CreateEnquire(arc->EndNode, pInfo);
+		}
+		arc = arc->lpNextChild;
+	}
+	return true;
+}

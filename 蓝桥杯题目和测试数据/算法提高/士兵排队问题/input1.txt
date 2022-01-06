@@ -1,0 +1,5 @@
+S>O
+O>E
+E>A
+A>S
+S>Y

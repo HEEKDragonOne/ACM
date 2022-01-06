@@ -1,0 +1,100 @@
+create tsslaueptm 0 iihulelkbd
+create tfqirtrzcx 1 tsslaueptm
+create pdprxoigty 1 tsslaueptm
+create yhyrvyhkit 1 tsslaueptm
+create cuqcfkbxng 0 sfjxlqxwin
+create moxaidwjrf 0 qyxfjrhemy
+create vcghsisuhk 1 yhyrvyhkit
+create trfnlqreau 0 fshfeikjcq
+create rvtygufuix 1 moxaidwjrf
+create qfxvxvxuky 0 iyasxxoepr
+create pohbtrsfeb 0 fdrvyrgumf
+create hxretrvjfq 0 dckomzonko
+create cszooihlhj 0 xpljrxpeee
+create vgvyuemtvo 1 yhyrvyhkit
+create hxygstbuxx 1 cuqcfkbxng
+create rcpwyhxqce 1 moxaidwjrf
+create pngudzdipi 1 tfqirtrzcx
+create phpkavtbbu 1 vgvyuemtvo
+create mcxriqpiph 1 phpkavtbbu
+create bjjpnxkuig 1 qfxvxvxuky
+create gpyinukllp 0 lejmbygrxf
+create phdnebxjvn 1 vgvyuemtvo
+create lcaqskehhl 1 mcxriqpiph
+create emsezlaems 1 cuqcfkbxng
+create xvjxtdsovs 0 atrdbfqjes
+create ghgvqvozzc 0 odjyricces
+create elcoyhhjht 1 hxretrvjfq
+create donqvbhfjs 1 rcpwyhxqce
+create mjhratwbhd 1 donqvbhfjs
+create mvjxanzied 1 tsslaueptm
+create lapcmnyjkj 1 cszooihlhj
+create raiqzrwhec 1 lcaqskehhl
+create moaotpsvwk 1 ghgvqvozzc
+create vrbdsvyakr 1 pngudzdipi
+create fhcnqrynxr 1 gpyinukllp
+create cwqujocksr 0 nmxxslkbir
+create dwpdsqqkoa 0 skstraytst
+create cklqkhbamz 0 hbjohdpvwi
+create kmdydoufrl 1 lcaqskehhl
+create ibnbnjcuwu 1 moxaidwjrf
+create qrbszbrerf 1 cwqujocksr
+create wnonivvlcp 1 mvjxanzied
+create jolrrgeiwc 1 mvjxanzied
+create cefijdiphu 1 raiqzrwhec
+create ufncdsvarl 1 vcghsisuhk
+create lfxqwaetyj 1 pngudzdipi
+create nvttaujimo 0 skdvidhzyi
+create znbfdzaprb 1 pdprxoigty
+create xxftgefaqq 1 lapcmnyjkj
+create ikkdgmwjmk 0 nywadxrhge
+open phdnebxjvn
+open emsezlaems
+open qrbszbrerf
+open cwqujocksr
+create xxftgefaqq 1 cefijdiphu
+open ufncdsvarl
+create pdprxoigty 1 tfqirtrzcx
+open hxygstbuxx
+open hxygstbuxx
+open pohbtrsfeb
+open emsezlaems
+open vcghsisuhk
+open qfxvxvxuky
+open raiqzrwhec
+open wnonivvlcp
+open cszooihlhj
+open znbfdzaprb
+open vgvyuemtvo
+create cwqujocksr 1 moaotpsvwk
+create xxftgefaqq 1 mjhratwbhd
+open phpkavtbbu
+open mvjxanzied
+create qfxvxvxuky 1 pdprxoigty
+open phpkavtbbu
+open cuqcfkbxng
+open bjjpnxkuig
+open elcoyhhjht
+open jolrrgeiwc
+open elcoyhhjht
+open jolrrgeiwc
+create cuqcfkbxng 1 yhyrvyhkit
+open hxygstbuxx
+open pohbtrsfeb
+open qrbszbrerf
+open phdnebxjvn
+open rcpwyhxqce
+open xvjxtdsovs
+create cwqujocksr 1 donqvbhfjs
+open elcoyhhjht
+open vgvyuemtvo
+open cefijdiphu
+open lcaqskehhl
+open cklqkhbamz
+open trfnlqreau
+open moxaidwjrf
+open cklqkhbamz
+open pdprxoigty
+open pngudzdipi
+create cklqkhbamz 1 qfxvxvxuky
+exit

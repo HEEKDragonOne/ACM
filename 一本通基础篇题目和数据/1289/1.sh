@@ -1,0 +1,10 @@
+./std < ./data/missile0.in > ./data/missile0.out
+./std < ./data/missile1.in > ./data/missile1.out
+./std < ./data/missile2.in > ./data/missile2.out
+./std < ./data/missile3.in > ./data/missile3.out
+./std < ./data/missile4.in > ./data/missile4.out
+./std < ./data/missile5.in > ./data/missile5.out
+./std < ./data/missile6.in > ./data/missile6.out
+./std < ./data/missile7.in > ./data/missile7.out
+./std < ./data/missile8.in > ./data/missile8.out
+./std < ./data/missile9.in > ./data/missile9.out

@@ -1,0 +1,18 @@
+10 4
+sdfsdsassdasdddsasdd
+sdasdsasdsadasdasdsa
+assasaasadassadsaadd
+ssasdasdasdssddsassa
+asdasdasdasdasddsads
+dsadasdasdasadssdssa
+asssdasdsasdassdssaa
+dsaddsasdasdsadsaasa
+adsadsasddsadsadsssa
+adsdsaasddsaadsdsasa
+6
+aa
+sa
+ds
+da
+sa
+sd

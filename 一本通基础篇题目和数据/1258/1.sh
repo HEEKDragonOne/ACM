@@ -1,0 +1,10 @@
+./std < ./data/shuta0.in > ./data/shuta0.out
+./std < ./data/shuta1.in > ./data/shuta1.out
+./std < ./data/shuta2.in > ./data/shuta2.out
+./std < ./data/shuta3.in > ./data/shuta3.out
+./std < ./data/shuta4.in > ./data/shuta4.out
+./std < ./data/shuta5.in > ./data/shuta5.out
+./std < ./data/shuta6.in > ./data/shuta6.out
+./std < ./data/shuta7.in > ./data/shuta7.out
+./std < ./data/shuta8.in > ./data/shuta8.out
+./std < ./data/shuta9.in > ./data/shuta9.out

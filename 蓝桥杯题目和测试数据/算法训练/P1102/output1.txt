@@ -1,0 +1,3 @@
+Bob male 19 90
+Miller male 17 92
+Alice female 18 98

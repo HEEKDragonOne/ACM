@@ -1,0 +1,22 @@
+10
+HAPPY1 9 M
+Happy0 0 M
+Happy1 1 F
+Happy2 2 M
+Happy3 3 F
+Happy4 4 M
+Happy5 5 F
+Happy6 6 M
+Happy7 7 F
+Happy8 8 M
+10
+Happy0 8
+2 Happy8
+Happy7 HAPPY1
+0 1
+1 2
+2 3
+3 4
+4 5
+5 6
+6 7

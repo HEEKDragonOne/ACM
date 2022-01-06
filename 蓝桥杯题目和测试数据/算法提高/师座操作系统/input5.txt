@@ -1,0 +1,100 @@
+create zfpwdwpkoo 0 shdtdyzxzg
+create jpiuedzsxw 0 mntacmlkgt
+create krhhxydhds 1 jpiuedzsxw
+create uxgtjbkmov 1 zfpwdwpkoo
+create hzcgmckfou 0 rcbldbjwyf
+create mfopqfvsjn 1 hzcgmckfou
+create jdufqkienz 0 bzdaandbuu
+create hkzghckuoc 0 cobcqrghfn
+create bbgvhhopcg 1 krhhxydhds
+create noynljlmmk 1 hzcgmckfou
+create qmzikvyykf 1 krhhxydhds
+create xwflxgtcvj 1 noynljlmmk
+create wmolstfytq 1 jpiuedzsxw
+create ygritppmqo 1 qmzikvyykf
+create wnysufejwv 1 jpiuedzsxw
+create hygyhldetc 0 uektbymyot
+create ecvwcwytsn 1 krhhxydhds
+create tvantzupnr 1 hzcgmckfou
+create kniqubtgrh 0 nziulqorsk
+create iuiicfljbf 1 noynljlmmk
+create sngoepnxhi 1 noynljlmmk
+create qinudffzvd 1 hygyhldetc
+create sdjddtgklo 0 qkdofqxren
+create gehrsffbcx 1 jdufqkienz
+create fwpqhevspg 1 wnysufejwv
+create seitxldbar 0 waotcmfqgu
+create wykailmaqu 1 noynljlmmk
+create eepttvnmbg 1 jpiuedzsxw
+create gnksoeewxe 0 jikbnvqipe
+create brjvdkgfpe 0 fgiwjturps
+create zsaupgzjdc 1 ecvwcwytsn
+create cvogccqded 1 jpiuedzsxw
+create npvwkxcrmp 1 jdufqkienz
+create nxbdtjmnuz 0 sbrztfcpdd
+create essidwhsyp 0 gqimdjlzhg
+create kcfmbhgytt 1 wykailmaqu
+create pvzrymtaua 1 iuiicfljbf
+create bmrnvsydqh 0 kkdehgwcjy
+create qmyrherlvv 1 gehrsffbcx
+create tvtspcsjej 0 ucxtmwubcb
+create kievndcfmx 1 bmrnvsydqh
+create kosgzmxjfi 0 twekzofhzf
+create lnruvrotbq 1 kosgzmxjfi
+create puinrrpvnn 1 hygyhldetc
+create blifyscwrp 1 gnksoeewxe
+create inzujcvkyw 1 blifyscwrp
+create kkqrvrlqvn 0 chwvxmolyg
+create vxcxltoeob 1 sngoepnxhi
+create jjripustpv 1 wmolstfytq
+create ishvwldhwq 1 puinrrpvnn
+open pvzrymtaua
+open ecvwcwytsn
+open krhhxydhds
+open bmrnvsydqh
+open kosgzmxjfi
+open kosgzmxjfi
+open ygritppmqo
+open qmyrherlvv
+open hkzghckuoc
+open uxgtjbkmov
+open gehrsffbcx
+open wmolstfytq
+open kcfmbhgytt
+open essidwhsyp
+open zfpwdwpkoo
+open xwflxgtcvj
+open gnksoeewxe
+open wmolstfytq
+open sdjddtgklo
+open sdjddtgklo
+open mfopqfvsjn
+open kkqrvrlqvn
+open kievndcfmx
+open sdjddtgklo
+open xwflxgtcvj
+open bbgvhhopcg
+create nxbdtjmnuz 1 seitxldbar
+open nxbdtjmnuz
+open blifyscwrp
+open gnksoeewxe
+open kosgzmxjfi
+create hzcgmckfou 1 zfpwdwpkoo
+open kosgzmxjfi
+open pvzrymtaua
+open tvantzupnr
+open jpiuedzsxw
+open xwflxgtcvj
+open cvogccqded
+open kniqubtgrh
+open tvtspcsjej
+open iuiicfljbf
+open npvwkxcrmp
+open iuiicfljbf
+create gehrsffbcx 1 krhhxydhds
+open hygyhldetc
+open kniqubtgrh
+open inzujcvkyw
+open qmzikvyykf
+open zsaupgzjdc
+exit

@@ -1,0 +1,26 @@
+      TESTS:*1
+       SHOW:*1
+        THE:****4
+      WATER:**2
+        WAS:*1
+  DRINKABLE:*1
+         ON:*1
+     SUNDAY:*1
+      LOCAL:*1
+AUTHORITIES:*1
+       SAID:*1
+  POLLUTION:*1
+       CAME:*1
+       FROM:**2
+          A:*1
+   CHEMICAL:*1
+    COMPANY:*1
+      WHICH:**2
+        HAD:*1
+   RELEASED:*1
+     PHENOL:*1
+       INTO:*1
+      RIVER:*1
+      PLANT:*1
+       GETS:*1
+        ITS:*1

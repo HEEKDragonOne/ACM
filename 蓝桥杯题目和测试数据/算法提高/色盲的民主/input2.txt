@@ -1,0 +1,201 @@
+200
+blue red
+skyblue
+teal
+royalblue
+palegoldenrod
+snow
+beige
+tan
+pansy
+sandybrown
+brown
+grey
+powderblue
+thistle
+silver
+rosybrown
+sienna
+slategray
+powderblue
+sienna
+steelblue
+violet
+red
+grey
+royalblue
+paleturquoise
+sapphire
+navy
+white
+snow
+salmon
+seashell
+thistle
+rosybrown
+peachpuff
+white
+yellowgreen
+teal
+slateblue
+snow
+palegreen
+palegoldenrod
+grey
+purple
+whitesmoke
+sandy beige
+shocking pink
+pink
+rubine
+turquoise blue
+black
+yellow
+steelblue
+palegreen
+steelblue
+salmon pink
+salmon pink
+silver
+turquoise blue
+royalblue
+smoky gray
+seagreen
+winered
+saddlebrown
+black
+steelblue
+palevioletred
+turquoise
+tan
+grey
+teal
+rubine
+peru
+offwhite
+turquoise
+rosybrown
+rubine
+salmon pink
+palevioletred
+salmon pink
+snow
+whitesmoke
+winered
+seagreen
+wheat
+rosybrown
+pink
+silver
+cream
+pink
+turquoise
+wheat
+sandy beige
+plum
+yellowgreen
+grey
+snow
+paleturquoise
+shocking pink
+teal
+khaki
+salmon
+pansy
+seashell
+skyblue
+red
+steelblue
+powderblue
+sandy beige
+slategray
+winered
+teal
+yellow
+skyblue
+palevioletred
+rosybrown
+scarlet
+teal
+pink
+winered
+rubine
+wheat
+sapphire
+slateblue
+royalblue
+whitesmoke
+whitesmoke
+seashell
+whitesmoke
+slategray
+sienna
+navy
+yellowgreen
+springgreen
+tan
+palevioletred
+sandy beige
+rosybrown
+sandybrown
+navy
+sienna
+navy
+offwhite
+sandy beige
+white
+pansy
+red
+palegreen
+silver
+thistle
+whitesmoke
+blue red
+tan
+stone
+red
+seagreen
+palegreen
+red
+blue red
+peachpuff
+yellow
+steelblue
+black
+winered
+pink
+stone
+black
+seashell
+papayawhip
+paleturquoise
+plum
+salmon
+turquoise
+snow
+khaki
+yellowgreen
+pink
+sandy beige
+peru
+sapphire
+springgreen
+tan
+rosybrown
+cream
+stone
+shocking pink
+pansy
+palegoldenrod
+pansy
+sienna
+tan
+springgreen
+palegreen
+saddlebrown
+whitesmoke
+peru
+salmon pink
+saddlebrown
+seashell
+peru

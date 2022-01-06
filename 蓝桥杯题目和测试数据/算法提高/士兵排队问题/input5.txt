@@ -1,0 +1,15 @@
+F>G
+K>D
+B>H
+H>S
+H>G
+L>B
+S>F
+H>D
+L>B
+H>S
+H>F
+H>Z
+Z>K
+D>G
+M>G

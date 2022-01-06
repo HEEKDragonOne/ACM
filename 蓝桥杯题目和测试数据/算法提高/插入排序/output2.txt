@@ -1,0 +1,49 @@
+Insert element[1]:
+  Init:1
+  Final:1
+Insert element[2]:
+  Init:1 7
+  Final:1 7
+Insert element[3]:
+  Init:1 7 8
+  Final:1 7 8
+Insert element[4]:
+  Init:1 7 8 6
+  Move back:1 7 8 8
+  Move back:1 7 7 8
+  Final:1 6 7 8
+Insert element[5]:
+  Init:1 6 7 8 7
+  Move back:1 6 7 8 8
+  Final:1 6 7 7 8
+Insert element[6]:
+  Init:1 6 7 7 8 5
+  Move back:1 6 7 7 8 8
+  Move back:1 6 7 7 7 8
+  Move back:1 6 7 7 7 8
+  Move back:1 6 6 7 7 8
+  Final:1 5 6 7 7 8
+Insert element[7]:
+  Init:1 5 6 7 7 8 8
+  Final:1 5 6 7 7 8 8
+Insert element[8]:
+  Init:1 5 6 7 7 8 8 5
+  Move back:1 5 6 7 7 8 8 8
+  Move back:1 5 6 7 7 8 8 8
+  Move back:1 5 6 7 7 7 8 8
+  Move back:1 5 6 7 7 7 8 8
+  Move back:1 5 6 6 7 7 8 8
+  Final:1 5 5 6 7 7 8 8
+Insert element[9]:
+  Init:1 5 5 6 7 7 8 8 7
+  Move back:1 5 5 6 7 7 8 8 8
+  Move back:1 5 5 6 7 7 8 8 8
+  Final:1 5 5 6 7 7 7 8 8
+Insert element[10]:
+  Init:1 5 5 6 7 7 7 8 8 6
+  Move back:1 5 5 6 7 7 7 8 8 8
+  Move back:1 5 5 6 7 7 7 8 8 8
+  Move back:1 5 5 6 7 7 7 7 8 8
+  Move back:1 5 5 6 7 7 7 7 8 8
+  Move back:1 5 5 6 7 7 7 7 8 8
+  Final:1 5 5 6 6 7 7 7 8 8

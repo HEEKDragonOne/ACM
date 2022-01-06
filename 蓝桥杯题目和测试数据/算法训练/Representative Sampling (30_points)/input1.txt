@@ -1,0 +1,6 @@
+5 3
+a
+ab
+abc
+abcd
+abcde
