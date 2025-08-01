@@ -2,7 +2,7 @@
 
 阿克曼(Ackmann)函数$A(m，n)$中，$m，n$定义域是非负整数$(m≤3,n≤10)$，函数值定义为：
 
-$akm(m,n) = \\begin{cases}n+1&(m=0时)\\\\akm(m-1,1)&(m>0,n=0时)\\\\akm(m-1,akm(m, n-1))&(m,n>0时)\\\\ \\end{cases}$
+$akm(m,n) = \begin{cases}n+1&(m=0时)\\akm(m-1,1)&(m>0,n=0时)\\akm(m-1,akm(m, n-1))&(m,n>0时)\\ \end{cases}$
 
 ### 【输入】
 

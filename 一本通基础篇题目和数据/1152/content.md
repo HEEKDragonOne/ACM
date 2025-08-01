@@ -2,7 +2,7 @@
 
 已知:
 
-$m=\\frac{\\max(a,b,c)}{\\max(a+b,b,c) × \\max(a,b,b+c)}$
+$m=\frac{\max(a,b,c)}{\max(a+b,b,c) × \max(a,b,b+c)}$
 
 输入$a,b,c$，求$m$。把求三个数的最大数$max(x,y,z)$分别定义成函数和过程来做。
 

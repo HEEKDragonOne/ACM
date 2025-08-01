@@ -2,7 +2,11 @@
 
 用递归的方法求Hermite多项式的值
 
-$$h\_n(x)= \\begin{cases} \\begin{array}{11} 1 & n=0 \\\\ 2x & n=1\\\\2xh\_{n-1}(x)-2(n-1)h\_{n-2}(x) & n>1 \\end{array} \\end{cases}$$
+$$h_n(x)= \begin{cases} 
+1 & n=0 \\ 
+2x & n=1 \\
+2xh_{n-1}(x)-2(n-1)h_{n-2}(x) & n>1 
+\end{cases}$$
 
 对给定的$x$和正整数$n$，求多项式的值。
 

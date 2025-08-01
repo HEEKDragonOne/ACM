@@ -2,7 +2,7 @@
 
 根据公式：
 
-$arctanx(x) = x- \\frac{x^3}{3} + \\frac{x^5}{5} - \\frac{x^7}{7} + ...$和$π=6arctanx(\\frac{1}{\\sqrt{3}})$
+$arctanx(x) = x- \frac{x^3}{3} + \frac{x^5}{5} - \frac{x^7}{7} + ...$和$π=6arctanx(\frac{1}{\sqrt{3}})$
 
 定义函数 $arctanx(x)$，求当最后一项小于$10^{-6}$时$π$的值。
 

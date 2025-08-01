@@ -2,7 +2,7 @@
 
 已知
 
-$f(x,n)=\\sqrt{n+\\sqrt{(n-1)+\\sqrt{(n-2)+\\sqrt{...+2+\\sqrt{1+x}}}}}$
+$f(x,n)=\sqrt{n+\sqrt{(n-1)+\sqrt{(n-2)+\sqrt{...+2+\sqrt{1+x}}}}}$
 
 计算$x=4.2，n=10$以及$x=2.5，n=15$时的$f$的值。
 
